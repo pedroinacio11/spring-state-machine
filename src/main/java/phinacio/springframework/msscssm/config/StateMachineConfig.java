@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.messaging.support.MessageBuilder;
 import org.springframework.statemachine.action.Action;
 import org.springframework.statemachine.config.EnableStateMachineFactory;
+import org.springframework.statemachine.config.EnumStateMachineConfigurerAdapter;
 import org.springframework.statemachine.config.StateMachineConfigurerAdapter;
 import org.springframework.statemachine.config.builders.StateMachineConfigurationConfigurer;
 import org.springframework.statemachine.config.builders.StateMachineStateConfigurer;
@@ -21,7 +22,7 @@ import java.util.Random;
 @Slf4j
 @EnableStateMachineFactory
 @Configuration
-public class StateMachineConfig extends StateMachineConfigurerAdapter<PaymentState, PaymentEvent> {
+public class StateMachineConfig extends EnumStateMachineConfigurerAdapter<PaymentState, PaymentEvent> {
 
     @Override
     public void configure(StateMachineStateConfigurer<PaymentState, PaymentEvent> states) throws Exception {

@@ -15,6 +15,8 @@ import java.math.BigDecimal;
 @Entity
 public class Payment {
 
+    // Aqui seria a tabela de controle
+
     @Id
     @GeneratedValue
     private Long id;
